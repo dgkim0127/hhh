@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Cloudtype App</title>
+    <title>File Upload Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello, Cloudtype!</h1>
-    <p>This is a simple test application deployed from GitHub to Cloudtype.</p>
+    <div class="container">
+        <h1>Upload Your File</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" id="fileInput" name="file" accept="image/*, video/*" />
+            <button type="submit">Upload</button>
+        </form>
+        <div id="message"></div>
+        <h2>Uploaded Files</h2>
+        <div id="uploadedFiles"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
