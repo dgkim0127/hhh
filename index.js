@@ -3,6 +3,9 @@ const fileUpload = require('express-fileupload');
 const path = require('path');
 const app = express();
 
+// 정적 파일 서빙을 위한 미들웨어 설정 (index.html, style.css, script.js 등을 제공)
+app.use(express.static(path.join(__dirname, 'public')));
+
 // 파일 업로드 미들웨어 설정
 app.use(fileUpload());
 app.use(express.static('uploads')); // 업로드된 파일을 제공할 폴더
